@@ -1,1 +1,440 @@
-<!doctype html><html><head><link rel="stylesheet" href="css/style.css"><title>Contact</title></head><body><header><div class="container"><h1>Contact</h1></div></header><main class="container"><p><strong>VELS ENTERPRISES</strong></p><p>Pudukkottai, Tamil Nadu</p><p>Phone: +91 73974 97293</p><p>Email: velsenterprisesvrm@gmail.com</p></main><footer>© VELS ENTERPRISES</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mayil Organics</title>
+    <meta name="description" content="Get in touch with Mayil Organics by VELS ENTERPRISES for orders, wholesale inquiries, and premium organic products.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #fffdf8 0%, #f8f5eb 100%);
+        }
+
+        .contact-page .top-bar {
+            background: #1f5e2d;
+        }
+
+        .contact-page header {
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+        }
+
+        .contact-hero {
+            padding: 92px 0 70px;
+            background: linear-gradient(135deg, #fffdf7 0%, #f6fbed 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before,
+        .contact-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: .16;
+            pointer-events: none;
+        }
+
+        .contact-hero::before {
+            width: 280px;
+            height: 280px;
+            background: #1f5e2d;
+            top: -105px;
+            right: -95px;
+        }
+
+        .contact-hero::after {
+            width: 220px;
+            height: 220px;
+            background: #c79a2b;
+            bottom: -90px;
+            left: -80px;
+        }
+
+        .contact-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4vw, 3.1rem);
+            color: #1f5e2d;
+            margin-bottom: 16px;
+            max-width: 720px;
+        }
+
+        .contact-hero p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 720px;
+        }
+
+        .contact-section {
+            padding: 84px 0;
+            background: #fff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .contact-card,
+        .info-card,
+        .hours-card {
+            background: rgba(255,255,255,0.92);
+            border: 1px solid rgba(31,94,45,0.12);
+            border-radius: 24px;
+            box-shadow: 0 14px 30px rgba(0,0,0,.06);
+            padding: 28px;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 16px;
+        }
+
+        .contact-form .field-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            color: #1f5e2d;
+            margin-bottom: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            border: 1px solid #e3e3e3;
+            border-radius: 12px;
+            padding: 12px 14px;
+            font: inherit;
+            background: #fcfcfa;
+            color: #222;
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #1f5e2d, #2f7a3b);
+            color: #fff;
+            border: none;
+            padding: 13px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .info-list {
+            display: grid;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .info-item i {
+            color: #1f5e2d;
+            margin-top: 4px;
+        }
+
+        .map-placeholder {
+            margin-top: 18px;
+            min-height: 220px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #eef7eb 0%, #f8f3e2 100%);
+            border: 1px dashed rgba(31,94,45,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            color: #1f5e2d;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            background: #f7f5ef;
+            border-radius: 999px;
+            color: #1f5e2d;
+            font-weight: 600;
+        }
+
+        .hours-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 14px;
+            color: #555;
+        }
+
+        .hours-list div {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #e2e2e2;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .contact-form .field-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 72px 0;
+            }
+
+            .contact-card,
+            .info-card,
+            .hours-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body class="contact-page">
+<div class="page-loading"><div class="loader"></div></div>
+<div class="search-modal">
+    <div class="modal-card">
+        <div class="modal-head"><h3>Search Products</h3><button type="button" class="close" aria-label="Close search">✕</button></div>
+        <input type="text" placeholder="Search for products">
+        <div class="search-results"></div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="container">
+        <div class="top-left">
+            <span><i class="fa-solid fa-leaf"></i> 100% Natural</span>
+            <span><i class="fa-solid fa-truck"></i> Pan India Delivery</span>
+        </div>
+        <div class="top-right">
+            <span class="top-bar-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Certified</span>
+            <i class="fa-brands fa-whatsapp"></i>
+            +91 73974 97293
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Mayil Organics Logo">
+                <div class="logo-text">
+                    <h2>Mayil Organics</h2>
+                    <span>by VELS ENTERPRISES</span>
+                    <small>Pure • Natural • Healthy</small>
+                </div>
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="search-btn" aria-label="Search products"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="https://wa.me/917397497293"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<section class="contact-hero">
+    <div class="container">
+        <h1>Contact Mayil Organics</h1>
+        <p>For orders, wholesale inquiries, and natural wellness support, reach out to our team. We are happy to help with premium organic solutions that suit your needs.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="section-title">
+                    <span>CONTACT FORM</span>
+                    <h2>Let’s talk</h2>
+                    <p>Share a few details and we’ll get back to you with the right support.</p>
+                </div>
+                <form class="contact-form">
+                    <div class="field-row">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Your phone number">
+                    </div>
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="How can we help?">
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us more about your inquiry"></textarea>
+                    </div>
+                    <button type="submit" class="contact-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+
+            <div>
+                <div class="info-card">
+                    <div class="section-title">
+                        <span>BUSINESS INFORMATION</span>
+                        <h2>Company details</h2>
+                    </div>
+                    <div class="info-list">
+                        <div class="info-item"><i class="fa-solid fa-building"></i><div><strong>Business Name</strong><br>VELS ENTERPRISES</div></div>
+                        <div class="info-item"><i class="fa-solid fa-leaf"></i><div><strong>Brand</strong><br>Mayil Organics</div></div>
+                        <div class="info-item"><i class="fa-solid fa-badge-check"></i><div><strong>FSSAI Licence No.</strong><br>22426160000465</div></div>
+                        <div class="info-item"><i class="fa-solid fa-globe"></i><div><strong>Website</strong><br>www.velsenterprises.in</div></div>
+                        <div class="info-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><br>velsenterprisesvrm@gmail.com</div></div>
+                        <div class="info-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><br>+91 73974 97293</div></div>
+                    </div>
+                </div>
+
+                <div class="info-card" style="margin-top: 20px;">
+                    <div class="section-title">
+                        <span>GET IN TOUCH</span>
+                        <h2>Contact details</h2>
+                    </div>
+                    <div class="info-list">
+                        <div class="info-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><br>+91 73974 97293</div></div>
+                        <div class="info-item"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><br>+91 73974 97293</div></div>
+                        <div class="info-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><br>velsenterprisesvrm@gmail.com</div></div>
+                        <div class="info-item"><i class="fa-solid fa-location-dot"></i><div><strong>Address</strong><br>Pudukkottai, Tamil Nadu, India</div></div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/917397497293"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    </div>
+                </div>
+
+                <div class="hours-card" style="margin-top: 20px;">
+                    <div class="section-title">
+                        <span>BUSINESS HOURS</span>
+                        <h2>Visit us</h2>
+                    </div>
+                    <div class="hours-list">
+                        <div><span>Monday - Friday</span><strong>9:00 AM - 6:00 PM</strong></div>
+                        <div><span>Saturday</span><strong>9:00 AM - 2:00 PM</strong></div>
+                        <div><span>Sunday</span><strong>Closed</strong></div>
+                    </div>
+                    <div class="map-placeholder">
+                        Google Maps placeholder<br>Location preview will appear here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>Mayil Organics</h3>
+                <p>by VELS ENTERPRISES</p>
+                <p>Premium Traditional Grains, Millets & Organic Products.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Products</h4>
+                <ul>
+                    <li>Karuppu Kavuni</li>
+                    <li>Mappillai Samba</li>
+                    <li>Thinai</li>
+                    <li>Kuthiraivali</li>
+                    <li>Sivapu Solam</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>📍 Pudukkottai, Tamil Nadu</p>
+                <p>📞 +91 73974 97293</p>
+                <p>✉️ velsenterprisesvrm@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Licence No. 22426160000465</div>
+<p class="copyright">© 2026 Mayil Organics by VELS ENTERPRISES. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/917397497293" class="floating-whatsapp" aria-label="WhatsApp Enquiry"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -7,9 +7,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mayil Organics | by VELS ENTERPRISES</title>
+<title>Mayil Organics | Premium Organic Foods by VELS ENTERPRISES</title>
 
-<meta name="description" content="Premium Organic Foods, Traditional Rice, Millets & Organic Powders">
+<meta name="description" content="Premium organic foods, traditional grains, and millets by Mayil Organics and VELS ENTERPRISES. FSSAI certified and delivered pan India.">
+<meta name="keywords" content="Mayil Organics, organic food, traditional rice, millets, FSSAI certified, VELS ENTERPRISES">
+<meta name="theme-color" content="#1F5E2D">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -26,6 +28,14 @@ href="css/style.css">
 </head>
 
 <body>
+<div class="page-loading"><div class="loader"></div></div>
+<div class="search-modal">
+    <div class="modal-card">
+        <div class="modal-head"><h3>Search Products</h3><button type="button" class="close" aria-label="Close search">✕</button></div>
+        <input type="text" placeholder="Search for products">
+        <div class="search-results"></div>
+    </div>
+</div>
 
 <!--================== TOP BAR ==================-->
 
@@ -42,6 +52,8 @@ href="css/style.css">
 </div>
 
 <div class="top-right">
+
+<span class="top-bar-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Certified</span>
 
 <i class="fa-brands fa-whatsapp"></i>
 
@@ -61,7 +73,7 @@ href="css/style.css">
 
 <nav>
 
-<div class="logo">
+<a href="index.html" class="logo">
 
     <img src="images/logo.png" alt="Mayil Organics Logo">
 
@@ -75,7 +87,15 @@ href="css/style.css">
 
     </div>
 
-</div>
+</a>
+
+<button class="menu-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="nav-links">
 
 <ul>
 
@@ -93,13 +113,15 @@ href="css/style.css">
 
 <div class="nav-icons">
 
-<i class="fa-solid fa-magnifying-glass"></i>
+<button class="search-btn" aria-label="Search products"><i class="fa-solid fa-magnifying-glass"></i></button>
 
 <a href="https://wa.me/917397497293">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
+</div>
 
 </div>
 
@@ -155,6 +177,16 @@ Contact Us
 
 </div>
 
+<div class="hero-highlights">
+
+<span><i class="fa-solid fa-seedling"></i> Trusted organic source</span>
+
+<span><i class="fa-solid fa-shield-heart"></i> Hygienically packed</span>
+
+<span><i class="fa-solid fa-bowl-food"></i> Fresh everyday essentials</span>
+
+</div>
+
 </div>
 
 <div class="hero-right">
@@ -168,148 +200,18 @@ alt="Organic Foods">
 </div>
 
 </section>
-<!-- =========================
-     FEATURED PRODUCTS
-========================== -->
 
-<section class="featured-products">
-
+<section class="trust-strip">
     <div class="container">
-
-        <div class="section-title">
-
-            <span>OUR COLLECTION</span>
-
-            <h2>Featured Products</h2>
-
-            <p>
-                Carefully selected traditional grains that support a healthier lifestyle.
-            </p>
-
-        </div>
-
-        <div class="product-grid">
-
-            <!-- Product 1 -->
-
-            <div class="product-card">
-
-                <img src="images/products/karuppu-kavuni.png"
-                     alt="Karuppu Kavuni">
-
-                <div class="product-info">
-
-                    <h3>Karuppu Kavuni Rice</h3>
-
-                    <p>
-                        Ancient black rice naturally rich in antioxidants and fibre.
-                    </p>
-
-                    <a href="products.html" class="product-btn">
-                        View Product
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Product 2 -->
-
-            <div class="product-card">
-
-                <img src="images/products/mappillai-samba.png"
-                     alt="Mappillai Samba">
-
-                <div class="product-info">
-
-                    <h3>Mappillai Samba Rice</h3>
-
-                    <p>
-                        Traditional red rice known for its nutrition and taste.
-                    </p>
-
-                    <a href="products.html" class="product-btn">
-                        View Product
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Product 3 -->
-
-            <div class="product-card">
-
-                <img src="images/products/thinai.png"
-                     alt="Thinai">
-
-                <div class="product-info">
-
-                    <h3>Thinai</h3>
-
-                    <p>
-                        Premium foxtail millet packed with natural goodness.
-                    </p>
-
-                    <a href="products.html" class="product-btn">
-                        View Product
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Product 4 -->
-
-            <div class="product-card">
-
-                <img src="images/products/kuthiraivali.png"
-                     alt="Kuthiraivali">
-
-                <div class="product-info">
-
-                    <h3>Kuthiraivali</h3>
-
-                    <p>
-                        Barnyard millet with low GI and high nutritional value.
-                    </p>
-
-                    <a href="products.html" class="product-btn">
-                        View Product
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Product 5 -->
-
-            <div class="product-card">
-
-                <img src="images/products/sivapu-solam.png"
-                     alt="Sivapu Solam">
-
-                <div class="product-info">
-
-                    <h3>Sivapu Solam</h3>
-
-                    <p>
-                        Traditional red sorghum rich in fibre and minerals.
-                    </p>
-
-                    <a href="products.html" class="product-btn">
-                        View Product
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
+        <div class="trust-item"><i class="fa-solid fa-badge-check"></i> FSSAI Certified</div>
+        <div class="trust-item"><i class="fa-solid fa-seedling"></i> 100% Natural</div>
+        <div class="trust-item"><i class="fa-solid fa-wheat-awn"></i> Traditional Varieties</div>
+        <div class="trust-item"><i class="fa-solid fa-people-group"></i> Direct from Farmers</div>
+        <div class="trust-item"><i class="fa-solid fa-shield-heart"></i> Hygienically Packed</div>
+        <div class="trust-item"><i class="fa-solid fa-truck-fast"></i> Pan India Delivery</div>
     </div>
-
 </section>
+
 <!-- =========================
      WHY CHOOSE US
 ========================== -->
@@ -335,26 +237,196 @@ alt="Organic Foods">
             <div class="feature-box">
                 <i class="fa-solid fa-seedling"></i>
                 <h3>100% Natural</h3>
-                <p>No artificial colours or preservatives.</p>
+                <p>Pure ingredients sourced with care, free from artificial additives.</p>
             </div>
 
             <div class="feature-box">
                 <i class="fa-solid fa-wheat-awn"></i>
-                <h3>Traditional Grains</h3>
-                <p>Authentic varieties loved for generations.</p>
+                <h3>Traditional Varieties</h3>
+                <p>Authentic heritage grains and millets loved for generations.</p>
             </div>
 
             <div class="feature-box">
-                <i class="fa-solid fa-award"></i>
-                <h3>Premium Quality</h3>
-                <p>Carefully selected and hygienically packed.</p>
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Direct from Farmers</h3>
+                <p>Ethically sourced products that support trusted farming communities.</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-shield-heart"></i>
+                <h3>Hygienically Packed</h3>
+                <p>Carefully processed and packed to preserve freshness and quality.</p>
             </div>
 
             <div class="feature-box">
                 <i class="fa-solid fa-truck-fast"></i>
-                <h3>Fast Delivery</h3>
-                <p>Safe delivery across India.</p>
+                <h3>Pan India Delivery</h3>
+                <p>Reliable doorstep delivery across India with the utmost care.</p>
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FEATURED PRODUCTS
+========================== -->
+
+<section class="featured-products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>OUR COLLECTION</span>
+
+            <h2>Featured Traditional Grains</h2>
+
+            <p>
+                Carefully selected traditional grains sourced from trusted farmers.
+            </p>
+
+        </div>
+
+        <div class="product-grid">
+
+            <article class="product-card" data-href="karuppu-kavuni.html">
+                <div class="product-media">
+                    <span class="best-seller">Best Seller</span>
+                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>
+                    <img src="images/products/karuppu-kavuni.png" alt="Karuppu Kavuni">
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3>Karuppu Kavuni Rice</h3>
+                        <span class="product-tag">Ancient Grain</span>
+                    </div>
+                    <p>Ancient black rice rich in antioxidants and heritage nutrition.</p>
+                    <div class="product-badges">
+                        <span class="pill natural-pill">100% Natural</span>
+                    </div>
+                    <div class="product-rating" aria-label="Five star rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="karuppu-kavuni.html" class="product-btn outline-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Karuppu%20Kavuni%20Rice" class="product-btn whatsapp-btn" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-href="mappillai-samba.html">
+                <div class="product-media">
+                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>
+                    <img src="images/products/mappillai-samba.png" alt="Mappillai Samba">
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3>Mappillai Samba Rice</h3>
+                        <span class="product-tag">Traditional Rice</span>
+                    </div>
+                    <p>Wholesome red rice known for its flavor and nourishment.</p>
+                    <div class="product-badges">
+                        <span class="pill natural-pill">100% Natural</span>
+                    </div>
+                    <div class="product-rating" aria-label="Five star rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="mappillai-samba.html" class="product-btn outline-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Mappillai%20Samba%20Rice" class="product-btn whatsapp-btn" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-href="thinai.html">
+                <div class="product-media">
+                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>
+                    <img src="images/products/thinai.png" alt="Thinai">
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3>Thinai</h3>
+                        <span class="product-tag">Millet</span>
+                    </div>
+                    <p>Premium foxtail millet that brings lightness and health together.</p>
+                    <div class="product-badges">
+                        <span class="pill natural-pill">100% Natural</span>
+                    </div>
+                    <div class="product-rating" aria-label="Five star rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="thinai.html" class="product-btn outline-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Thinai" class="product-btn whatsapp-btn" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-href="kuthiraivali.html">
+                <div class="product-media">
+                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>
+                    <img src="images/products/kuthiraivali.png" alt="Kuthiraivali">
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3>Kuthiraivali</h3>
+                        <span class="product-tag">Low GI</span>
+                    </div>
+                    <p>Barnyard millet with wholesome goodness and everyday versatility.</p>
+                    <div class="product-badges">
+                        <span class="pill natural-pill">100% Natural</span>
+                    </div>
+                    <div class="product-rating" aria-label="Five star rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="kuthiraivali.html" class="product-btn outline-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Kuthiraivali" class="product-btn whatsapp-btn" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-href="sivapu-solam.html">
+                <div class="product-media">
+                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>
+                    <img src="images/products/sivapu-solam.png" alt="Sivapu Solam">
+                </div>
+                <div class="product-info">
+                    <div class="product-top">
+                        <h3>Sivapu Solam</h3>
+                        <span class="product-tag">Nutritious Grain</span>
+                    </div>
+                    <p>Traditional red sorghum with earthy character and rich nourishment.</p>
+                    <div class="product-badges">
+                        <span class="pill natural-pill">100% Natural</span>
+                    </div>
+                    <div class="product-rating" aria-label="Five star rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5.0</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="sivapu-solam.html" class="product-btn outline-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Sivapu%20Solam" class="product-btn whatsapp-btn" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry
+                        </a>
+                    </div>
+                </div>
+            </article>
 
         </div>
 
@@ -374,7 +446,7 @@ alt="Organic Foods">
 
             <div class="about-image">
 
-                <img src="images/about.jpg" alt="Mayil Organics">
+                <img src="images/hero-banner.jpg" alt="Mayil Organics">
 
             </div>
 
@@ -406,6 +478,115 @@ alt="Organic Foods">
 
                 </a>
 
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     ABOUT MAYIL ORGANICS
+========================== -->
+
+<section class="about-premium">
+
+    <div class="container">
+
+        <div class="about-premium-grid">
+
+            <div class="about-premium-image">
+                <img src="images/hero-banner.jpg" alt="Organic farm produce">
+            </div>
+
+            <div class="about-premium-content">
+
+                <span>ABOUT MAYIL ORGANICS</span>
+
+                <h2>About Mayil Organics</h2>
+
+                <p>
+                    Mayil Organics by VELS ENTERPRISES is a trusted name in premium organic foods,
+                    bringing the richness of traditional grains, millets, and natural ingredients
+                    to homes across India.
+                </p>
+
+                <p>
+                    We are committed to quality, purity, and wellness by sourcing carefully selected
+                    products that honor heritage farming practices and modern health needs.
+                </p>
+
+                <div class="about-premium-features">
+                    <div class="about-feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>100% Organic</span>
+                    </div>
+                    <div class="about-feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Traditional Farming</span>
+                    </div>
+                    <div class="about-feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Hygienically Packed</span>
+                    </div>
+                    <div class="about-feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Premium Quality</span>
+                    </div>
+                </div>
+
+                <div class="about-premium-buttons">
+                    <a href="about.html" class="btn">Learn More</a>
+                    <a href="contact.html" class="btn-outline">Contact Us</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     OUR PROMISE
+========================== -->
+
+<section class="our-promise">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>OUR PROMISE</span>
+            <h2>Our Promise</h2>
+            <p>We bring purity, trust, and wholesome nutrition to every family we serve.</p>
+        </div>
+
+        <div class="promise-grid">
+
+            <div class="promise-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h3>100% Natural</h3>
+                <p>Carefully selected ingredients with no artificial compromise.</p>
+            </div>
+
+            <div class="promise-card">
+                <i class="fa-solid fa-ban"></i>
+                <h3>No Chemicals</h3>
+                <p>Pure products made with respect for nature and health.</p>
+            </div>
+
+            <div class="promise-card">
+                <i class="fa-solid fa-carrot"></i>
+                <h3>Farm Fresh</h3>
+                <p>Fresh-from-source quality that preserves authenticity and taste.</p>
+            </div>
+
+            <div class="promise-card">
+                <i class="fa-solid fa-smile"></i>
+                <h3>Customer Satisfaction</h3>
+                <p>Committed to dependable service and lasting customer trust.</p>
             </div>
 
         </div>
@@ -690,6 +871,8 @@ Millets & Organic Products.
 
 <hr>
 
+<div class="footer-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Licence No. 22426160000465</div>
+
 <p class="copyright">
 
 © 2026 Mayil Organics by VELS ENTERPRISES.
@@ -701,6 +884,8 @@ All Rights Reserved.
 </div>
 
 </footer>
+
+<a href="https://wa.me/917397497293" class="floating-whatsapp" aria-label="WhatsApp Enquiry"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script src="js/script.js"></script>
 

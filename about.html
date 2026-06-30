@@ -1,1 +1,443 @@
-<!doctype html><html><head><link rel="stylesheet" href="css/style.css"><title>About</title></head><body><header><div class="container"><h1>About VELS ENTERPRISES</h1></div></header><main class="container"><p>VELS ENTERPRISES supplies water filtration products and household solutions with a focus on quality and customer satisfaction.</p></main><footer>© VELS ENTERPRISES</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Mayil Organics</title>
+    <meta name="description" content="About Mayil Organics by VELS ENTERPRISES, a premium brand for traditional grains and organic wellness products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #fffdf8 0%, #f8f5eb 100%);
+        }
+
+        .about-page header {
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+        }
+
+        .about-hero {
+            padding: 90px 0 70px;
+            background: linear-gradient(135deg, #fffdf7 0%, #f5faf1 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before,
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: .16;
+            pointer-events: none;
+        }
+
+        .about-hero::before {
+            width: 280px;
+            height: 280px;
+            background: #1f5e2d;
+            top: -110px;
+            right: -90px;
+        }
+
+        .about-hero::after {
+            width: 220px;
+            height: 220px;
+            background: #c79a2b;
+            bottom: -95px;
+            left: -75px;
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4vw, 3.1rem);
+            color: #1f5e2d;
+            margin-bottom: 16px;
+            max-width: 760px;
+        }
+
+        .about-hero p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 760px;
+        }
+
+        .about-hero .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .about-hero .hero-pills span {
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.84);
+            color: #1f5e2d;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(31,94,45,0.07);
+        }
+
+        .about-story {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 44px;
+            align-items: center;
+        }
+
+        .about-image img {
+            border-radius: 28px;
+            height: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            box-shadow: 0 18px 40px rgba(31,94,45,0.14);
+        }
+
+        .about-card {
+            background: linear-gradient(135deg, #fffdf8, #f6faf2);
+            border: 1px solid rgba(31,94,45,0.1);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 12px 24px rgba(0,0,0,.04);
+        }
+
+        .about-card span {
+            color: #c79a2b;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .about-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: #1f5e2d;
+            font-size: 34px;
+            margin: 14px 0 16px;
+        }
+
+        .about-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .about-values {
+            padding: 85px 0;
+            background: linear-gradient(180deg, #fdfcf7 0%, #f8f5eb 100%);
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .value-card {
+            background: rgba(255,255,255,0.86);
+            border: 1px solid rgba(31,94,45,0.1);
+            border-radius: 22px;
+            padding: 24px;
+            transition: .35s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,.04);
+        }
+
+        .value-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 35px rgba(31,94,45,0.12);
+        }
+
+        .value-card i {
+            font-size: 34px;
+            color: #1f5e2d;
+            margin-bottom: 12px;
+            display: inline-flex;
+            width: 56px;
+            height: 56px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(31,94,45,0.08);
+        }
+
+        .value-card h3 {
+            color: #1f5e2d;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .cta-section {
+            padding: 90px 0 100px;
+            background: linear-gradient(135deg, #1f5e2d, #2e7d32);
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 3vw, 2.45rem);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            max-width: 720px;
+            margin: 0 auto 24px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+        }
+
+        .cta-section .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero,
+            .about-story,
+            .about-values,
+            .cta-section {
+                padding: 72px 0;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="about-page">
+<div class="page-loading"><div class="loader"></div></div>
+<div class="search-modal">
+    <div class="modal-card">
+        <div class="modal-head"><h3>Search Products</h3><button type="button" class="close" aria-label="Close search">✕</button></div>
+        <input type="text" placeholder="Search for products">
+        <div class="search-results"></div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="container">
+        <div class="top-left">
+            <span><i class="fa-solid fa-leaf"></i> 100% Natural</span>
+            <span><i class="fa-solid fa-truck"></i> Pan India Delivery</span>
+        </div>
+        <div class="top-right">
+            <span class="top-bar-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Certified</span>
+            <i class="fa-brands fa-whatsapp"></i>
+            +91 73974 97293
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Mayil Organics Logo">
+                <div class="logo-text">
+                    <h2>Mayil Organics</h2>
+                    <span>by VELS ENTERPRISES</span>
+                    <small>Pure • Natural • Healthy</small>
+                </div>
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="search-btn" aria-label="Search products"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="https://wa.me/917397497293"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="about-hero">
+    <div class="container">
+        <h1>About Mayil Organics</h1>
+        <p>Mayil Organics by VELS ENTERPRISES is a premium organic brand rooted in tradition, purity, and wellness. We bring carefully sourced grains and health-focused products from trusted farms to modern homes.</p>
+        <div class="hero-pills">
+            <span>Pure Ingredients</span>
+            <span>Traditional Farming</span>
+            <span>Premium Quality</span>
+        </div>
+    </div>
+</section>
+
+<section class="about-story">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="images/hero-banner.jpg" alt="Organic farm and premium produce">
+            </div>
+            <div class="about-card">
+                <span>Company Story</span>
+                <h2>Bringing Heritage Grains to Every Home</h2>
+                <p>Mayil Organics was born from a passion for healthy living and respect for traditional farming. We believe the best nutrition comes from nature, from food that is grown with care, handled with hygiene, and delivered with trust.</p>
+                <p>Our journey is rooted in the belief that every meal should nourish body, culture, and family well-being. That is why we curate premium grains and organic products with the highest standards of purity and quality.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-values">
+    <div class="container">
+        <div class="section-title">
+            <span>QUALITY & CERTIFICATIONS</span>
+            <h2>Safe, Premium & Trusted</h2>
+            <p>We uphold high standards of food safety, hygiene, and quality assurance at every stage of production and delivery.</p>
+        </div>
+
+        <div class="value-grid">
+            <div class="value-card">
+                <i class="fa-solid fa-badge-check"></i>
+                <h3>FSSAI Certified</h3>
+                <p>Our operations are backed by an FSSAI licence to support food safety and compliance.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Food Safety Standards</h3>
+                <p>We follow strict processes for handling, processing, and storage to ensure product integrity.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-sparkles"></i>
+                <h3>Hygienic Processing</h3>
+                <p>Every product is processed with care in hygienic conditions and packed responsibly.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-medal"></i>
+                <h3>Quality Assured</h3>
+                <p>Premium quality is maintained through consistent sourcing, handling, and customer focus.</p>
+            </div>
+        </div>
+
+        <div class="about-card" style="margin-top:22px;">
+            <span>LICENCE DETAILS</span>
+            <h2>FSSAI Licence No. 22426160000465</h2>
+            <p>This certification reflects our commitment to maintaining trusted food standards and transparency for every customer.</p>
+        </div>
+
+        <div class="value-grid">
+            <div class="value-card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Mission</h3>
+                <p>To bring authentic, naturally grown foods to homes with the right balance of tradition, nutrition, and quality.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Vision</h3>
+                <p>To become a trusted name in organic wellness by making premium natural foods accessible and dependable.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Why Choose Us</h3>
+                <p>We combine heritage, hygiene, and honest sourcing to deliver products that are healthy, flavorful, and reliable.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Farmer Partnership</h3>
+                <p>We work closely with trusted farming communities to preserve quality, authenticity, and responsible cultivation.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h3>Our Journey</h3>
+                <p>From traditional roots to modern expectations, every step of our journey is shaped by care, integrity, and wellness.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-shield-heart"></i>
+                <h3>Quality Assurance</h3>
+                <p>Each product is selected and packed with strict hygiene standards to preserve freshness and trust.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Experience the Mayil Organics difference</h2>
+        <p>Discover premium organic products rooted in tradition, crafted with care, and delivered with confidence.</p>
+        <div class="cta-buttons">
+            <a href="products.html" class="btn">Explore Products</a>
+            <a href="contact.html" class="btn-outline">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>Mayil Organics</h3>
+                <p>by VELS ENTERPRISES</p>
+                <p>Premium Traditional Grains, Millets & Organic Products.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Products</h4>
+                <ul>
+                    <li>Karuppu Kavuni</li>
+                    <li>Mappillai Samba</li>
+                    <li>Thinai</li>
+                    <li>Kuthiraivali</li>
+                    <li>Sivapu Solam</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>📍 Pudukkottai, Tamil Nadu</p>
+                <p>📞 +91 73974 97293</p>
+                <p>✉️ velsenterprisesvrm@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Licence No. 22426160000465</div>
+<p class="copyright">© 2026 Mayil Organics by VELS ENTERPRISES. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/917397497293" class="floating-whatsapp" aria-label="WhatsApp Enquiry"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

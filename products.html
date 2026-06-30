@@ -4,490 +4,753 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Products | Mayil Organics</title>
-
+<meta name="description" content="Premium traditional grains and organic products by Mayil Organics by VELS ENTERPRISES.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 <link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+        background: linear-gradient(180deg, #fffdf8 0%, #f8f5eb 100%);
+    }
 
+    .products-page .top-bar {
+        background: #1f5e2d;
+    }
+
+    .products-page header {
+        background: rgba(255,255,255,0.96);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 25px rgba(0,0,0,.06);
+    }
+
+    .products-page .logo-text h2 {
+        font-size: 32px;
+    }
+
+    .products-page .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    .products-page .menu-toggle span {
+        width: 24px;
+        height: 2px;
+        background: #1f5e2d;
+        border-radius: 2px;
+    }
+
+    .products-page .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .products-page .nav-links ul {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .products-page .nav-links ul a {
+        font-weight: 600;
+        position: relative;
+    }
+
+    .products-page .nav-links ul a.active,
+    .products-page .nav-links ul a:hover {
+        color: #1f5e2d;
+    }
+
+    .products-page .nav-links ul a.active::after,
+    .products-page .nav-links ul a:hover::after {
+        width: 100%;
+    }
+
+    .products-page .nav-links ul a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: #1f5e2d;
+        transition: .3s;
+    }
+
+    .products-page .nav-icons {
+        display: flex;
+        gap: 16px;
+        font-size: 20px;
+        color: #1f5e2d;
+    }
+
+    .products-hero {
+        padding: 90px 0 70px;
+        background: linear-gradient(135deg, #fffdf7 0%, #f6fbed 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .products-hero::before,
+    .products-hero::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        opacity: .16;
+        pointer-events: none;
+    }
+
+    .products-hero::before {
+        width: 280px;
+        height: 280px;
+        background: #1f5e2d;
+        top: -100px;
+        right: -80px;
+    }
+
+    .products-hero::after {
+        width: 200px;
+        height: 200px;
+        background: #c79a2b;
+        bottom: -90px;
+        left: -70px;
+    }
+
+    .products-hero .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .products-hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.2rem, 4vw, 3.1rem);
+        color: #1f5e2d;
+        margin-bottom: 16px;
+        max-width: 700px;
+    }
+
+    .products-hero p {
+        color: #666;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        max-width: 680px;
+        margin-bottom: 20px;
+    }
+
+    .hero-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-pills span {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.85);
+        color: #1f5e2d;
+        font-weight: 600;
+        box-shadow: 0 8px 20px rgba(31,94,45,0.07);
+    }
+
+    .product-section {
+        padding: 90px 0;
+        background: #fff;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+        align-items: stretch;
+    }
+
+    .premium-product-card {
+        background: rgba(255,255,255,0.84);
+        backdrop-filter: blur(14px);
+        border: 1px solid rgba(31,94,45,0.12);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 12px 25px rgba(0,0,0,.06);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: .35s ease;
+    }
+
+    .premium-product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 45px rgba(31,94,45,0.15);
+    }
+
+    .premium-product-card .product-media {
+        position: relative;
+        background: linear-gradient(135deg, #fffdf7 0%, #f4f9f0 100%);
+        padding: 20px;
+    }
+
+    .premium-product-card .product-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: linear-gradient(135deg, #c79a2b, #f2c95a);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        text-transform: uppercase;
+    }
+
+    .premium-product-card .cert-badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: linear-gradient(135deg, #c79a2b, #f2c95a);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        text-transform: uppercase;
+    }
+
+    .premium-product-card img {
+        height: 240px;
+        object-fit: contain;
+        transition: .35s ease;
+    }
+
+    .premium-product-card:hover img {
+        transform: scale(1.03);
+    }
+
+    .premium-product-card .product-info {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+    }
+
+    .premium-product-card .product-info h3 {
+        color: #1f5e2d;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .premium-product-card .product-info p {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .premium-product-card .pill {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(31,94,45,0.08);
+        color: #1f5e2d;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 12px;
+        font-weight: 700;
+        width: fit-content;
+    }
+
+    .premium-product-card .benefits-list {
+        margin: 4px 0 0;
+        padding-left: 16px;
+        color: #666;
+    }
+
+    .premium-product-card .benefits-list li {
+        margin-bottom: 4px;
+    }
+
+    .premium-product-card .size-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 2px;
+    }
+
+    .premium-product-card .size-list span {
+        border: 1px solid rgba(31,94,45,0.14);
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 12px;
+        color: #1f5e2d;
+        background: #fcfdf8;
+    }
+
+    .premium-product-card .product-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: auto;
+        padding-top: 10px;
+    }
+
+    .premium-product-card .view-btn,
+    .premium-product-card .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        transition: .3s ease;
+        text-decoration: none;
+    }
+
+    .premium-product-card .view-btn {
+        background: #1f5e2d;
+        color: #fff;
+    }
+
+    .premium-product-card .whatsapp-btn {
+        background: linear-gradient(135deg, #25d366, #1fb85b);
+        color: #fff;
+    }
+
+    .premium-product-card .view-btn:hover,
+    .premium-product-card .whatsapp-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .coming-soon {
+        padding: 90px 0;
+        background: linear-gradient(180deg, #f9f6eb 0%, #fdfcf7 100%);
+    }
+
+    .coming-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+    }
+
+    .coming-card {
+        background: rgba(255,255,255,0.88);
+        border: 1px solid rgba(31,94,45,0.1);
+        border-radius: 24px;
+        padding: 30px 22px;
+        text-align: center;
+        box-shadow: 0 10px 22px rgba(0,0,0,.04);
+        transition: .35s ease;
+    }
+
+    .coming-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 35px rgba(31,94,45,0.12);
+    }
+
+    .coming-card i {
+        font-size: 38px;
+        color: #1f5e2d;
+        margin-bottom: 14px;
+        display: inline-flex;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(31,94,45,0.08);
+    }
+
+    .coming-card h3 {
+        color: #1f5e2d;
+        margin-bottom: 8px;
+    }
+
+    .coming-card span {
+        color: #c79a2b;
+        font-weight: 600;
+    }
+
+    .wholesale-cta {
+        padding: 90px 0 100px;
+        background: linear-gradient(135deg, #1f5e2d, #2e7d32);
+        color: #fff;
+        text-align: center;
+    }
+
+    .wholesale-cta h2 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        margin-bottom: 16px;
+    }
+
+    .wholesale-cta p {
+        max-width: 720px;
+        margin: 0 auto 28px;
+        color: rgba(255,255,255,0.9);
+        line-height: 1.8;
+    }
+
+    .wholesale-cta .cta-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .wholesale-cta .btn,
+    .wholesale-cta .btn-outline {
+        box-shadow: 0 12px 24px rgba(0,0,0,.15);
+    }
+
+    @media (max-width: 900px) {
+        .coming-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 860px) {
+        .products-page .menu-toggle {
+            display: flex;
+        }
+
+        .products-page .nav-links {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            background: rgba(255,255,255,0.98);
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 16px 35px rgba(0,0,0,.12);
+            min-width: 220px;
+        }
+
+        .products-page .nav-links.active {
+            display: flex;
+        }
+
+        .products-page .nav-links ul {
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .products-page .nav-icons {
+            margin-top: 8px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product-section,
+        .coming-soon,
+        .wholesale-cta {
+            padding: 72px 0;
+        }
+
+        .coming-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .premium-product-card .product-actions {
+            flex-direction: column;
+        }
+
+        .premium-product-card .view-btn,
+        .premium-product-card .whatsapp-btn {
+            width: 100%;
+        }
+    }
+</style>
 </head>
 
-<body>
-
-<!-- TOP BAR -->
+<body class="products-page">
+<div class="page-loading"><div class="loader"></div></div>
+<div class="search-modal">
+    <div class="modal-card">
+        <div class="modal-head"><h3>Search Products</h3><button type="button" class="close" aria-label="Close search">✕</button></div>
+        <input type="text" placeholder="Search for products">
+        <div class="search-results"></div>
+    </div>
+</div>
 
 <div class="top-bar">
-
-<div class="container">
-
-<div class="top-left">
-
-<span><i class="fa-solid fa-leaf"></i> 100% Natural</span>
-
-<span><i class="fa-solid fa-truck"></i> Pan India Delivery</span>
-
+    <div class="container">
+        <div class="top-left">
+            <span><i class="fa-solid fa-leaf"></i> 100% Natural</span>
+            <span><i class="fa-solid fa-truck"></i> Pan India Delivery</span>
+        </div>
+        <div class="top-right">
+            <span class="top-bar-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Certified</span>
+            <i class="fa-brands fa-whatsapp"></i>
+            +91 73974 97293
+        </div>
+    </div>
 </div>
-
-<div class="top-right">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-+91 73974 97293
-
-</div>
-
-</div>
-
-</div>
-
-<!-- HEADER -->
 
 <header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Mayil Organics Logo">
+                <div class="logo-text">
+                    <h2>Mayil Organics</h2>
+                    <span>by VELS ENTERPRISES</span>
+                    <small>Pure • Natural • Healthy</small>
+                </div>
+            </a>
 
-<div class="container">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-<nav>
-
-<div class="logo">
-
-<img src="images/logo.png" alt="Mayil Organics">
-
-<div>
-
-<h2>Mayil Organics</h2>
-
-<p>by VELS ENTERPRISES</p>
-
-</div>
-
-</div>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="products.html" class="active">Products</a></li>
-
-<li><a href="gallery.html">Gallery</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-<div class="nav-icons">
-
-<a href="https://wa.me/917397497293">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-</div>
-
-</nav>
-
-</div>
-
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="search-btn" aria-label="Search products"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <a href="https://wa.me/917397497293"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 
-<!-- HERO -->
-
-<section class="page-banner">
-
-<div class="container">
-
-<h1>Our Products</h1>
-
-<p>
-
-Traditional Grains • Millets • Organic Wellness Products
-
-</p>
-
-</div>
-
-</section>
-
-<!-- PRODUCTS -->
-
-<section class="featured-products">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>OUR PRODUCTS</span>
-
-<h2>Traditional Rice</h2>
-
-<p>
-
-Naturally grown and carefully packed.
-
-</p>
-
-</div>
-
-<div class="product-grid">
-<!-- Product 1 -->
-
-<div class="product-card">
-
-    <div class="product-badge">Best Seller</div>
-
-    <img src="images/products/karuppu-kavuni.png" alt="Karuppu Kavuni Rice">
-
-    <div class="product-info">
-
-        <h3>Karuppu Kavuni Rice</h3>
-
-        <p>Ancient black rice naturally rich in antioxidants, iron and fibre.</p>
-
-        <div class="rating">
-            ⭐⭐⭐⭐⭐
-        </div>
-
-        <p><strong>Available:</strong> 500g | 1kg | 5kg</p>
-
-        <div class="product-buttons">
-
-            <a href="#" class="btn-small">View Details</a>
-
-            <a href="https://wa.me/917397497293?text=I'm interested in Karuppu Kavuni Rice" class="btn-outline-small">
-
-                WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- Product 2 -->
-
-<div class="product-card">
-
-    <img src="images/products/mappillai-samba.png" alt="Mappillai Samba Rice">
-
-    <div class="product-info">
-
-        <h3>Mappillai Samba Rice</h3>
-
-        <p>Traditional red rice known for strength, nutrition and authentic taste.</p>
-
-        <div class="rating">
-            ⭐⭐⭐⭐⭐
-        </div>
-
-        <p><strong>Available:</strong> 500g | 1kg | 5kg</p>
-
-        <div class="product-buttons">
-
-            <a href="#" class="btn-small">View Details</a>
-
-            <a href="https://wa.me/917397497293?text=I'm interested in Mappillai Samba Rice" class="btn-outline-small">
-
-                WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- Product 3 -->
-
-<div class="product-card">
-
-    <img src="images/products/thinai.png" alt="Thinai">
-
-    <div class="product-info">
-
-        <h3>Thinai (Foxtail Millet)</h3>
-
-        <p>High-fibre millet that supports a healthy lifestyle.</p>
-
-        <div class="rating">
-            ⭐⭐⭐⭐⭐
-        </div>
-
-        <p><strong>Available:</strong> 500g | 1kg</p>
-
-        <div class="product-buttons">
-
-            <a href="#" class="btn-small">View Details</a>
-
-            <a href="https://wa.me/917397497293?text=I'm interested in Thinai" class="btn-outline-small">
-
-                WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- Product 4 -->
-
-<div class="product-card">
-
-    <img src="images/products/kuthiraivali.png" alt="Kuthiraivali">
-
-    <div class="product-info">
-
-        <h3>Kuthiraivali</h3>
-
-        <p>Nutritious barnyard millet with low glycemic index.</p>
-
-        <div class="rating">
-            ⭐⭐⭐⭐⭐
-        </div>
-
-        <p><strong>Available:</strong> 500g | 1kg</p>
-
-        <div class="product-buttons">
-
-            <a href="#" class="btn-small">View Details</a>
-
-            <a href="https://wa.me/917397497293?text=I'm interested in Kuthiraivali" class="btn-outline-small">
-
-                WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- Product 5 -->
-
-<div class="product-card">
-
-    <div class="product-badge new">New</div>
-
-    <img src="images/products/sivapu-solam.png" alt="Sivapu Solam">
-
-    <div class="product-info">
-
-        <h3>Sivapu Solam</h3>
-
-        <p>Traditional red sorghum rich in fibre and essential minerals.</p>
-
-        <div class="rating">
-            ⭐⭐⭐⭐⭐
-        </div>
-
-        <p><strong>Available:</strong> 500g | 1kg</p>
-
-        <div class="product-buttons">
-
-            <a href="#" class="btn-small">View Details</a>
-
-            <a href="https://wa.me/917397497293?text=I'm interested in Sivapu Solam" class="btn-outline-small">
-
-                WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- =========================
-     COMING SOON
-========================== -->
-
-<section class="categories">
-
+<section class="products-hero">
     <div class="container">
+        <h1>Traditional Grains & Organic Products</h1>
+        <p>Naturally grown, carefully selected and hygienically packed to bring wholesome goodness to your everyday meals.</p>
+        <div class="hero-pills">
+            <span>100% Natural</span>
+            <span>Trusted Farmers</span>
+            <span>Pan India Delivery</span>
+        </div>
+    </div>
+</section>
 
+<section class="product-section">
+    <div class="container">
         <div class="section-title">
-
-            <span>COMING SOON</span>
-
-            <h2>More Organic Products</h2>
-
-            <p>
-                We are expanding our range with more healthy and natural products.
-            </p>
-
+            <span>OUR PRODUCTS</span>
+            <h2>Premium Traditional Grains</h2>
+            <p>Discover a curated range of heritage grains and organic staples chosen for purity, nutrition and taste.</p>
         </div>
 
-        <div class="category-grid">
+        <div class="product-grid">
+            <article class="premium-product-card" data-href="karuppu-kavuni.html">
+                <div class="product-media">
+                    <span class="product-badge">Best Seller</span>                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>                    <img src="images/products/karuppu-kavuni.png" alt="Karuppu Kavuni">
+                </div>
+                <div class="product-info">
+                    <h3>Karuppu Kavuni</h3>
+                    <p>Ancient black rice known for its rich color, bold taste and powerful nutrition.</p>
+                    <span class="pill">100% Natural</span>
+                    <ul class="benefits-list">
+                        <li>Rich in antioxidants</li>
+                        <li>Supports healthy digestion</li>
+                    </ul>
+                    <div class="size-list">
+                        <span>500g</span><span>1kg</span><span>5kg</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="karuppu-kavuni.html" class="view-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Karuppu%20Kavuni" class="whatsapp-btn" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </article>
 
-            <div class="category-card">
+            <article class="premium-product-card" data-href="mappillai-samba.html">
+                <div class="product-media">                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>                    <img src="images/products/mappillai-samba.png" alt="Mappillai Samba">
+                </div>
+                <div class="product-info">
+                    <h3>Mappillai Samba</h3>
+                    <p>Traditional red rice celebrated for its authentic flavor and wholesome goodness.</p>
+                    <span class="pill">100% Natural</span>
+                    <ul class="benefits-list">
+                        <li>Good source of minerals</li>
+                        <li>Excellent for everyday meals</li>
+                    </ul>
+                    <div class="size-list">
+                        <span>500g</span><span>1kg</span><span>5kg</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="mappillai-samba.html" class="view-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Mappillai%20Samba" class="whatsapp-btn" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </article>
 
-                <i class="fa-solid fa-mortar-pestle"></i>
+            <article class="premium-product-card" data-href="thinai.html">
+                <div class="product-media">                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>                    <img src="images/products/thinai.png" alt="Thinai">
+                </div>
+                <div class="product-info">
+                    <h3>Thinai</h3>
+                    <p>Premium foxtail millet with light texture and natural nutritional value.</p>
+                    <span class="pill">100% Natural</span>
+                    <ul class="benefits-list">
+                        <li>High in fibre</li>
+                        <li>Great for wholesome diets</li>
+                    </ul>
+                    <div class="size-list">
+                        <span>500g</span><span>1kg</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="thinai.html" class="view-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Thinai" class="whatsapp-btn" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </article>
 
-                <h3>Organic Powders</h3>
+            <article class="premium-product-card" data-href="kuthiraivali.html">
+                <div class="product-media">                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>                    <img src="images/products/kuthiraivali.png" alt="Kuthiraivali">
+                </div>
+                <div class="product-info">
+                    <h3>Kuthiraivali</h3>
+                    <p>Barnyard millet known for being filling, nutritious and wonderfully versatile.</p>
+                    <span class="pill">100% Natural</span>
+                    <ul class="benefits-list">
+                        <li>Low glycemic option</li>
+                        <li>Perfect for daily cooking</li>
+                    </ul>
+                    <div class="size-list">
+                        <span>500g</span><span>1kg</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="kuthiraivali.html" class="view-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Kuthiraivali" class="whatsapp-btn" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </article>
 
-                <small>Launching Soon</small>
-
-            </div>
-
-            <div class="category-card">
-
-                <i class="fa-solid fa-bottle-droplet"></i>
-
-                <h3>Cold Pressed Oils</h3>
-
-                <small>Launching Soon</small>
-
-            </div>
-
-            <div class="category-card">
-
-                <i class="fa-solid fa-pepper-hot"></i>
-
-                <h3>Natural Spices</h3>
-
-                <small>Launching Soon</small>
-
-            </div>
-
-            <div class="category-card">
-
-                <i class="fa-solid fa-heart-pulse"></i>
-
-                <h3>Health Mixes</h3>
-
-                <small>Launching Soon</small>
-
-            </div>
-
+            <article class="premium-product-card" data-href="sivapu-solam.html">
+                <div class="product-media">                    <span class="cert-badge"><i class="fa-solid fa-badge-check"></i> FSSAI</span>                    <img src="images/products/sivapu-solam.png" alt="Sivapu Solam">
+                </div>
+                <div class="product-info">
+                    <h3>Sivapu Solam</h3>
+                    <p>Traditional red sorghum packed with earthy character and wholesome nutrition.</p>
+                    <span class="pill">100% Natural</span>
+                    <ul class="benefits-list">
+                        <li>Rich in fibre and minerals</li>
+                        <li>Supports balanced meals</li>
+                    </ul>
+                    <div class="size-list">
+                        <span>500g</span><span>1kg</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="sivapu-solam.html" class="view-btn">View Details</a>
+                        <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Sivapu%20Solam" class="whatsapp-btn" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </article>
         </div>
-
     </div>
-
 </section>
 
-<!-- =========================
-     WHOLESALE CTA
-========================== -->
-
-<section class="contact-cta">
-
+<section class="coming-soon">
     <div class="container">
-
-        <h2>Looking for Bulk or Wholesale Orders?</h2>
-
-        <p>
-
-            We supply premium quality organic products for retailers, distributors and wholesale buyers across India.
-
-        </p>
-
-        <div class="cta-buttons">
-
-            <a href="https://wa.me/917397497293?text=Hi, I would like to enquire about wholesale orders." class="btn">
-
-                WhatsApp Us
-
-            </a>
-
-            <a href="contact.html" class="btn-outline">
-
-                Contact Us
-
-            </a>
-
+        <div class="section-title">
+            <span>COMING SOON</span>
+            <h2>More Organic Essentials</h2>
+            <p>We are expanding our range with more healthy, natural products curated for modern homes.</p>
         </div>
 
+        <div class="coming-grid">
+            <div class="coming-card">
+                <i class="fa-solid fa-mortar-pestle"></i>
+                <h3>Organic Powders</h3>
+                <span>Launching Soon</span>
+            </div>
+            <div class="coming-card">
+                <i class="fa-solid fa-bottle-droplet"></i>
+                <h3>Cold Pressed Oils</h3>
+                <span>Launching Soon</span>
+            </div>
+            <div class="coming-card">
+                <i class="fa-solid fa-pepper-hot"></i>
+                <h3>Spices</h3>
+                <span>Launching Soon</span>
+            </div>
+            <div class="coming-card">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h3>Health Mixes</h3>
+                <span>Launching Soon</span>
+            </div>
+        </div>
     </div>
-
 </section>
 
-<!-- =========================
-     FOOTER
-========================== -->
+<section class="wholesale-cta">
+    <div class="container">
+        <h2>Looking for Wholesale or Bulk Orders?</h2>
+        <p>We welcome retail, distributor, and wholesale enquiries for premium organic products delivered with care across India.</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/917397497293?text=Hi,%20I%20would%20like%20to%20enquire%20about%20wholesale%20orders." class="btn">WhatsApp Us</a>
+            <a href="contact.html" class="btn-outline">Contact Us</a>
+        </div>
+    </div>
+</section>
 
 <footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<h3>Mayil Organics</h3>
-
-<p>by VELS ENTERPRISES</p>
-
-<p>
-
-Premium Traditional Rice, Millets & Organic Wellness Products.
-
-</p>
-
-</div>
-
-<div>
-
-<h4>Quick Links</h4>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="products.html">Products</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h4>Contact</h4>
-
-<p>📍 Pudukkottai, Tamil Nadu</p>
-
-<p>📞 +91 73974 97293</p>
-
-<p>✉️ velsenterprisesvrm@gmail.com</p>
-
-</div>
-
-</div>
-
-<hr>
-
-<p class="copyright">
-
-© 2026 Mayil Organics by VELS ENTERPRISES. All Rights Reserved.
-
-</p>
-
-</div>
-
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>Mayil Organics</h3>
+                <p>by VELS ENTERPRISES</p>
+                <p>Premium Traditional Grains, Millets & Organic Products.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Products</h4>
+                <ul>
+                    <li>Karuppu Kavuni</li>
+                    <li>Mappillai Samba</li>
+                    <li>Thinai</li>
+                    <li>Kuthiraivali</li>
+                    <li>Sivapu Solam</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>📍 Pudukkottai, Tamil Nadu</p>
+                <p>📞 +91 73974 97293</p>
+                <p>✉️ velsenterprisesvrm@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Licence No. 22426160000465</div>
+<p class="copyright">© 2026 Mayil Organics by VELS ENTERPRISES. All Rights Reserved.</p>
+    </div>
 </footer>
 
-<script src="js/script.js"></script>
+<a href="https://wa.me/917397497293" class="floating-whatsapp" aria-label="WhatsApp Enquiry"><i class="fa-brands fa-whatsapp"></i></a>
 
+<script src="js/script.js"></script>
 </body>
 </html>

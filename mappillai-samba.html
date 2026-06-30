@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappillai Samba | Mayil Organics</title>
+    <meta name="description" content="Discover Mappillai Samba rice, a traditional heirloom variety from Mayil Organics with wholesome nutrition and heritage value.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{background:#fffdf8;}
+        .detail-page header{background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);box-shadow:0 8px 25px rgba(0,0,0,.06);}
+        .detail-hero{padding:90px 0 70px;background:linear-gradient(135deg,#fffdf7 0%,#f6fbed 100%);}
+        .detail-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;}
+        .detail-card{background:#fff;border:1px solid rgba(31,94,45,.12);border-radius:24px;box-shadow:0 16px 32px rgba(0,0,0,.06);padding:28px;}
+        .detail-card h1{font-family:'Playfair Display',serif;color:#1f5e2d;font-size:clamp(2rem,3.2vw,2.8rem);margin:0 0 12px;}
+        .detail-card p{color:#666;line-height:1.8;}
+        .detail-list{display:grid;gap:10px;margin:18px 0 0;padding-left:18px;color:#555;}
+        .detail-list li{line-height:1.7;}
+        .detail-image{border-radius:24px;overflow:hidden;box-shadow:0 16px 32px rgba(0,0,0,.08);}
+        .detail-image img{width:100%;height:100%;object-fit:cover;display:block;}
+        .size-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+        .size-list span{padding:8px 12px;border-radius:999px;background:#f5f2e8;color:#1f5e2d;font-weight:600;}
+        .detail-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+        .detail-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:999px;font-weight:600;text-decoration:none;transition:.3s ease;}
+        .detail-btn.primary{background:linear-gradient(135deg,#1f5e2d,#2e7d32);color:#fff;}
+        .detail-btn.secondary{background:#f7f5ef;color:#1f5e2d;border:1px solid rgba(31,94,45,.12);} 
+        .detail-btn:hover{transform:translateY(-2px);} 
+        .related-section{padding:70px 0 90px;background:#fff;}
+        .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:24px;}
+        .related-card{background:#fcfbf5;border:1px solid rgba(31,94,45,.1);border-radius:18px;padding:18px;text-align:center;}
+        .related-card img{width:100%;max-height:170px;object-fit:contain;border-radius:12px;background:#fff;padding:8px;}
+        .related-card h3{margin:12px 0 8px;color:#1f5e2d;font-size:18px;}
+        .related-card a{display:inline-block;margin-top:8px;color:#c79a2b;font-weight:600;text-decoration:none;}
+        @media (max-width:900px){.detail-grid{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body class="detail-page">
+<div class="page-loading"><div class="loader"></div></div>
+<div class="search-modal">
+    <div class="modal-card">
+        <div class="modal-head"><h3>Search Products</h3><button type="button" class="close" aria-label="Close search">✕</button></div>
+        <input type="text" placeholder="Search for products">
+        <div class="search-results"></div>
+    </div>
+</div>
+<div class="top-bar">
+    <div class="container">
+        <div class="top-left"><span><i class="fa-solid fa-leaf"></i> 100% Natural</span><span><i class="fa-solid fa-truck"></i> Pan India Delivery</span></div>
+        <div class="top-right"><span class="top-bar-badge"><i class="fa-solid fa-badge-check"></i> FSSAI Certified</span><i class="fa-brands fa-whatsapp"></i> +91 73974 97293</div>
+    </div>
+</div>
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Mayil Organics Logo">
+                <div class="logo-text"><h2>Mayil Organics</h2><span>by VELS ENTERPRISES</span><small>Pure • Natural • Healthy</small></div>
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons"><button class="search-btn" aria-label="Search products"><i class="fa-solid fa-magnifying-glass"></i></button><a href="https://wa.me/917397497293"><i class="fa-brands fa-whatsapp"></i></a></div>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="products.html">Products</a>
+        <span>/</span>
+        <span>Mappillai Samba</span>
+    </nav>
+</div>
+<section class="detail-hero">
+    <div class="container">
+        <div class="detail-grid">
+            <div class="detail-card">
+                <h1>Mappillai Samba</h1>
+                <p>Mappillai Samba is a traditional red rice that brings together authentic taste, cultural heritage, and everyday nourishment. It is a natural choice for consumers seeking wholesome grains with character.</p>
+                <ul class="detail-list">
+                    <li><strong>Health Benefits:</strong> A good source of minerals and helps support balanced nutrition.</li>
+                    <li><strong>Nutritional Highlights:</strong> Naturally rich in fiber and essential nutrients.</li>
+                    <li><strong>Traditional Uses:</strong> Favored in traditional meals and festive preparations.</li>
+                    <li><strong>Cooking Suggestions:</strong> Great for daily cooking, steaming, and wholesome rice-based meals.</li>
+                </ul>
+                <div class="size-list"><span>500 g</span><span>1 kg</span><span>5 kg</span></div>
+                <div class="detail-actions">
+                    <a href="https://wa.me/917397497293?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Mappillai%20Samba" class="detail-btn primary" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry</a>
+                    <a href="products.html" class="detail-btn secondary">Back to Products</a>
+                </div>
+            </div>
+            <div class="detail-image"><img src="images/products/mappillai-samba.png" alt="Mappillai Samba"></div>
+        </div>
+    </div>
+</section>
+<section class="related-section">
+    <div class="container">
+        <div class="section-title"><span>RELATED PRODUCTS</span><h2>Explore More Traditional Grains</h2></div>
+        <div class="related-grid">
+            <div class="related-card"><img src="images/products/karuppu-kavuni.png" alt="Karuppu Kavuni"><h3>Karuppu Kavuni</h3><a href="karuppu-kavuni.html">View Details</a></div>
+            <div class="related-card"><img src="images/products/thinai.png" alt="Thinai"><h3>Thinai</h3><a href="thinai.html">View Details</a></div>
+            <div class="related-card"><img src="images/products/sivapu-solam.png" alt="Sivapu Solam"><h3>Sivapu Solam</h3><a href="sivapu-solam.html">View Details</a></div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container footer-grid">
+        <div><h3>Mayil Organics</h3><p>Premium organic grains and traditional foods from VELS ENTERPRISES.</p></div>
+        <div><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h3>Contact</h3><p><i class="fa-brands fa-whatsapp"></i> +91 73974 97293<br><i class="fa-solid fa-envelope"></i> support@mayilorganics.com</p></div>
+    </div>
+</footer>
+<a href="https://wa.me/917397497293" class="floating-whatsapp" aria-label="WhatsApp Enquiry"><i class="fa-brands fa-whatsapp"></i></a>
+</body>
+</html>
